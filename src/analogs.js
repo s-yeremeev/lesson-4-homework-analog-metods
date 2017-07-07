@@ -21,12 +21,15 @@ const arrayArg2 = function(arr, callback) {
      let add = arr[i] + "-"
      results.push(add)
   }
+  let sb = "";
   for (let i in results) {
-    console.log(results[i])
+   let sm = sb + results[i]
+   sb = sm
   }
+  return sb
 }
 
-arrayArg2(yearArray)
+console.log(arrayArg2(yearArray))
 
 // 04. [map](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map);
 
