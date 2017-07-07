@@ -15,6 +15,19 @@ console.log(analogFilter);
 
 
 // 03. [join](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/join);
+const arrayArg2 = function(arr, callback) {
+  results =[]
+  for (let i in arr) {
+     let add = arr[i] + "-"
+     results.push(add)
+  }
+  for (let i in results) {
+    console.log(results[i])
+  }
+}
+
+arrayArg2(yearArray)
+
 // 04. [map](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map);
 
 /**
@@ -43,6 +56,26 @@ console.log(analogReduce);
 
 
 // 06. [sort](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort);
+
+// const sortan = function (arr) {
+//  const cloneArray = Object.assign({}, arr)
+//   const compare = function(a, b) {  
+//     return (a < b) ? -1 : (a > b) ? 1 : 0;
+//   }
+// var minLength = Math.min.apply(null, arr)
+// console.log(sortan(minLength))
+// let results = []
+//  for (let i in cloneArray) {
+//     if(minLength < cloneArray[i]){
+//       results.push(minLength)
+//     }
+// }
+//   return results
+// }
+
+// arraySort = [5, 4]
+// console.log(sortan(arraySort))
+
 // 07. [splice](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/splice);
 // 08. [slice](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/slice);
 
