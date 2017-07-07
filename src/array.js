@@ -1,6 +1,3 @@
-/**
- * yearArray - массив с годами
- */
 const yearArray = [
     "2016",
     "2017",
@@ -10,16 +7,14 @@ const yearArray = [
     "2016"
     ]
 
-/**
- * reduceArray - массив с масивами
-  */
 const reduceArray = [
     [1, 2, 3],
     [4, 5],
     [6]
     ]
 
-/**
- * numberArray - массив с числами
-  */
 const numberArray = [1, 2, 3, 4, 5]
+
+const numberSorting = [5, 4, 2, 0, 7]
+
+const spliceArray = ["New data"]

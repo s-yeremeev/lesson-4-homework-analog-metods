@@ -1,4 +1,23 @@
 /**
+ * Вызываем function concatFunction() с 2 массивами и объединяем их новый
+ * Исходные массивы не меняются
+ * @param {Array} arr
+ * @param {Array} arr2
+ * @return {Array} concatArray
+ */
+const concatFunction = function(arr, arr2) {
+  const concatArray = []
+  for(let i in arr){
+      concatArray.push(arr[i])
+  }
+  for(let i in arr2){
+      concatArray.push(arr2[i])
+  }
+  return concatArray
+}
+
+
+/**
 * Функция arrElement выполняет указанную функцию один раз для каждого элемента в массиве. 
 * На выходе получаем новый массив элементов.
 * Исходный массив не меняется.
@@ -17,6 +36,27 @@ const arrElement = function (arr, callback, arg) {
     }
   }
   return results;
+}
+
+/**
+* Функция arrayJoin выполняет указанную функцию один раз для каждого элемента в массиве.
+* Работает как аналогия метода join() 
+* На выходе получаем новое поле, заполненное данными с массива, значения разделены "---".
+* Исходный массив не меняется.
+*
+* @function arrayJoin
+* @param {Array} arr
+* @param {Function} callback
+* @return {String} stringBuilder
+*/
+const arrayJoin = function(arr, callback) {
+  let stringBuilder = ""
+  for (let i in arr) {
+     let add = stringBuilder + arr[i] + "---"
+     stringBuilder = add
+  }
+
+  return stringBuilder
 }
 
 /**
@@ -84,6 +124,7 @@ const arrayElementIndex = function(arr, callback){
 * @function arrayEinElement
 * @param {Array} arr
 * @param {Function} callback
+* @param {argument} arg 
 * @return {Array} results
 */
 const arrayEinElement = function (arr, callback, arg) {
@@ -116,3 +157,25 @@ const arrayElementFromTheEnd = function(arr){
   }
   return results;
 	}
+
+/**
+ * Функция arrayElementFromTheEnd выполняет сортировку в передаваемом массиве
+ * и перезаписывает его
+ * @function arraySorting
+ * @param {Array} arr
+ * @param {Function} callback
+ * @return {Array} arr
+ */
+  const arraySorting = function BubbleSort(arr){
+    for (let i = 0; i < arr.length-1; i++) { 
+        for (let j = 0; j < arr.length-1-i; j++) { 
+             if (arr[j+1] < arr[j]) { 
+                 let el = arr[j+1]
+                 arr[j+1] = arr[j]
+                 arr[j] = el; 
+             }
+        }
+     } 
+     
+     return arr;
+  }                    
